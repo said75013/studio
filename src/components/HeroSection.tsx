@@ -33,7 +33,7 @@ export default function HeroSection() {
           <Image 
             src="https://placehold.co/600x400.png" 
             alt="Réparation PC" 
-            data-ai-hint="computer repair technician"
+            data-ai-hint="computer repair"
             width={600}
             height={400}
             className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-500 ease-out"

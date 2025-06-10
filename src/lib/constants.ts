@@ -10,7 +10,6 @@ export const NAV_LINKS: NavLink[] = [
   { href: "/", label: "Accueil" },
   { href: "/services", label: "Services" },
   { href: "/book-appointment", label: "Prendre RDV" },
-  { href: "/troubleshooting", label: "Dépannage IA" },
 ];
 
 export const SERVICES: Service[] = [

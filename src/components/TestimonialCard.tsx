@@ -13,7 +13,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
       <CardHeader>
         <div className="flex items-center space-x-3">
           <Avatar>
-            <AvatarImage src={testimonial.avatarSrc} alt={testimonial.name} data-ai-hint="person avatar" />
+            <AvatarImage src={testimonial.avatarSrc} alt={testimonial.name} data-ai-hint="client portrait" />
             <AvatarFallback>{testimonial.name.substring(0, 2).toUpperCase()}</AvatarFallback>
           </Avatar>
           <div>

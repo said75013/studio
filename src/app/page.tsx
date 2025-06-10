@@ -88,7 +88,7 @@ export default function Home() {
           <Image 
             src="https://placehold.co/1200x600.png" 
             alt="Zone de service à Bruxelles" 
-            data-ai-hint="Brussels map service area"
+            data-ai-hint="Brussels map"
             width={1200} 
             height={600}
             className="w-full h-full object-cover"
