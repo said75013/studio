@@ -2,6 +2,7 @@ import ServiceCard from '@/components/ServiceCard';
 import { SERVICES } from '@/lib/constants';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ServicesPage() {
   return (
