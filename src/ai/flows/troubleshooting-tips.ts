@@ -1,3 +1,4 @@
+
 // Troubleshooting tips flow
 'use server';
 /**
@@ -50,6 +51,11 @@ const troubleshootingTipsFlow = ai.defineFlow(
   },
   async input => {
     const {output} = await prompt(input);
-    return output!;
+    if (!output || typeof output.troubleshootingTips !== 'string' || output.troubleshootingTips.trim() === '') {
+      console.error('Genkit prompt did not return the expected output structure, type, or content for troubleshootingTips.');
+      throw new Error('AI_RESPONSE_FORMAT_ERROR');
+    }
+    return output;
   }
 );
+
