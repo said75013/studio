@@ -3,8 +3,8 @@ import { Wrench, Laptop, Printer, Wifi, Cloud, HardDrive, Smartphone, Tablet, Se
 import type { Service, Testimonial, NavLink } from '@/types';
 
 export const CONTACT_PHONE = "+32 (0)X XX XX XX XX";
-export const CONTACT_EMAIL = "contact@techsupportbxl.example.com";
-export const APP_NAME = "TechSupport BXL";
+export const CONTACT_EMAIL = "info@reparation-pc-bruxelles.com";
+export const APP_NAME = "Réparation PC Bruxelles";
 
 export const NAV_LINKS: NavLink[] = [
   { href: "/", label: "Accueil" },
@@ -95,7 +95,7 @@ export const TESTIMONIALS: Testimonial[] = [
   { 
     id: "1", 
     name: "Jean Dupont", 
-    quote: "Service rapide et extrêmement efficace ! Mon ordinateur portable fonctionne à nouveau comme au premier jour. Je recommande vivement TechSupport BXL.",
+    quote: "Service rapide et extrêmement efficace ! Mon ordinateur portable fonctionne à nouveau comme au premier jour. Je recommande vivement.",
     avatarSrc: "https://placehold.co/100x100.png?a=1",
     location: "Bruxelles Centre" 
   },

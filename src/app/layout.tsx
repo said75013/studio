@@ -4,11 +4,13 @@ import { Inter } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { APP_NAME } from '@/lib/constants'; // Import APP_NAME
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'TechSupport BXL',
+  metadataBase: new URL('https://reparation-pc-bruxelles.com'), // Add metadataBase
+  title: APP_NAME, // Use imported APP_NAME
   description: 'Maintenance et réparation PC à Bruxelles et environs.',
 };
 
