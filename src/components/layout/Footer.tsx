@@ -1,7 +1,20 @@
+"use client";
+
 import { APP_NAME, CONTACT_EMAIL, CONTACT_PHONE } from '@/lib/constants';
 import { Copyright, Mail, Phone } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
 export default function Footer() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // or a loading skeleton
+  }
+
   return (
     <footer className="bg-card text-card-foreground border-t">
       <div className="container mx-auto px-4 py-8 text-center md:text-left">

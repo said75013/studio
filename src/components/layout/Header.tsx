@@ -7,11 +7,16 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import { APP_NAME, NAV_LINKS, CONTACT_PHONE, CONTACT_EMAIL } from '@/lib/constants';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <header className="bg-card shadow-md sticky top-0 z-50">
@@ -38,12 +43,16 @@ export default function Header() {
           </nav>
           
           <div className="hidden md:flex flex-col items-end text-sm">
-            <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="flex items-center text-primary font-semibold hover:underline">
-              <Phone size={16} className="mr-1" /> {CONTACT_PHONE}
-            </a>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-muted-foreground hover:text-primary hover:underline">
-              <Mail size={16} className="inline mr-1" /> {CONTACT_EMAIL}
-            </a>
+             {isMounted && (
+              <>
+                <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="flex items-center text-primary font-semibold hover:underline">
+                  <Phone size={16} className="mr-1" /> {CONTACT_PHONE}
+                </a>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-muted-foreground hover:text-primary hover:underline">
+                  <Mail size={16} className="inline mr-1" /> {CONTACT_EMAIL}
+                </a>
+              </>
+            )}
           </div>
 
           {/* Mobile Navigation Trigger */}
@@ -84,12 +93,16 @@ export default function Header() {
                   ))}
                 </nav>
                 <div className="mt-8 border-t pt-6 space-y-3">
-                   <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="flex items-center text-primary font-semibold hover:underline text-lg">
-                     <Phone size={20} className="mr-2" /> {CONTACT_PHONE}
-                   </a>
-                   <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center text-muted-foreground hover:text-primary hover:underline text-sm">
-                     <Mail size={18} className="mr-2" /> {CONTACT_EMAIL}
-                   </a>
+                   {isMounted && (
+                    <>
+                      <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="flex items-center text-primary font-semibold hover:underline text-lg">
+                        <Phone size={20} className="mr-2" /> {CONTACT_PHONE}
+                      </a>
+                      <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center text-muted-foreground hover:text-primary hover:underline text-sm">
+                        <Mail size={18} className="mr-2" /> {CONTACT_EMAIL}
+                      </a>
+                    </>
+                   )}
                 </div>
               </SheetContent>
             </Sheet>
