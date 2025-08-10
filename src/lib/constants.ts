@@ -2,7 +2,7 @@ import type { LucideIcon } from 'lucide-react';
 import { Wrench, Laptop, Printer, Wifi, Cloud, HardDrive, Smartphone, Tablet, Server } from 'lucide-react';
 import type { Service, Testimonial, NavLink } from '@/types';
 
-export const CONTACT_PHONE = "+32 (0)X XX XX XX XX";
+export const CONTACT_PHONE = "0493 62 86 93";
 export const CONTACT_EMAIL = "info@reparation-pc-bruxelles.com";
 export const APP_NAME = "Réparation PC Bruxelles";
 
