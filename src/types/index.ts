@@ -13,15 +13,6 @@ export interface Service {
   details?: string[];
 }
 
-export interface Testimonial {
-  id: string;
-  name: string;
-  quote: string;
-  avatarSrc: string;
-  avatarHint: string;
-  location?: string;
-}
-
 export interface AppointmentFormData {
   name: string;
   email: string;

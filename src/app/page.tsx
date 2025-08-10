@@ -1,7 +1,6 @@
 import HeroSection from '@/components/HeroSection';
 import ServiceCard from '@/components/ServiceCard';
-import TestimonialCard from '@/components/TestimonialCard';
-import { SERVICES, TESTIMONIALS } from '@/lib/constants';
+import { SERVICES } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -60,21 +59,6 @@ export default function Home() {
               <p className="text-muted-foreground">Approche personnalisée pour répondre précisément à vos besoins spécifiques.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Ce Que Disent Nos Clients</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            La confiance et la satisfaction de nos clients sont notre meilleure récompense.
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {TESTIMONIALS.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-          ))}
         </div>
       </section>
 
