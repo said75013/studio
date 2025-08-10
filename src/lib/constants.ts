@@ -94,21 +94,24 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "1", 
     name: "Jean Dupont", 
     quote: "Service rapide et extrêmement efficace ! Mon ordinateur portable fonctionne à nouveau comme au premier jour. Je recommande vivement.",
-    avatarSrc: "https://placehold.co/100x100.png?a=1",
+    avatarSrc: "https://placehold.co/100x100.png",
+    avatarHint: "happy client man",
     location: "Bruxelles Centre" 
   },
   { 
     id: "2", 
     name: "Marie Leroy", 
     quote: "Très professionnel, à l'écoute et patient. Il a pris le temps de m'expliquer le problème et la solution. Excellent rapport qualité-prix.",
-    avatarSrc: "https://placehold.co/100x100.png?a=2",
+    avatarSrc: "https://placehold.co/100x100.png",
+    avatarHint: "happy client woman",
     location: "Schaerbeek"
   },
   { 
     id: "3", 
     name: "Ahmed Benali", 
     quote: "Intervention à domicile très pratique. Mon problème de réseau Wi-Fi a été résolu rapidement. Un grand merci !",
-    avatarSrc: "https://placehold.co/100x100.png?a=3",
+    avatarSrc: "https://placehold.co/100x100.png",
+    avatarHint: "satisfied customer",
     location: "Ixelles"
   },
 ];

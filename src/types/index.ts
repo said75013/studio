@@ -18,6 +18,7 @@ export interface Testimonial {
   name: string;
   quote: string;
   avatarSrc: string;
+  avatarHint: string;
   location?: string;
 }
 
