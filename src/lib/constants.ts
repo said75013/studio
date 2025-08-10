@@ -71,8 +71,6 @@ export const SERVICES: Service[] = [
     description: "Tentatives de récupération de données perdues sur disques durs, SSD, clés USB et autres supports de stockage.",
     icon: HardDrive,
     details: [
-      "Récupération après suppression accidentelle",
-      "Récupération sur disque endommagé (logiquement)",
       "Sauvegarde et restauration de données",
       "Conseils pour la prévention de perte de données"
     ]
