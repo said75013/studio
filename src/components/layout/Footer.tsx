@@ -14,8 +14,8 @@ export default function Footer() {
           </div>
           <div className="md:text-right">
             <h4 className="text-md font-semibold mb-2">Contactez-nous</h4>
-            <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="flex items-center justify-center md:justify-end text-sm text-muted-foreground hover:text-primary mb-1">
-              <Phone size={16} className="mr-2" /> {CONTACT_PHONE}
+            <a href={`tel:${"0493628693"}`} className="flex items-center justify-center md:justify-end text-sm text-muted-foreground hover:text-primary mb-1">
+              <Phone size={16} className="mr-2" /> {"0493 62 86 93"}
             </a>
             <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-center justify-center md:justify-end text-sm text-muted-foreground hover:text-primary">
               <Mail size={16} className="mr-2" /> {CONTACT_EMAIL}
