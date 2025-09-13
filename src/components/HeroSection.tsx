@@ -31,7 +31,7 @@ export default function HeroSection() {
         </div>
         <div className="hidden md:block relative aspect-video rounded-lg overflow-hidden shadow-2xl group">
           <Image 
-            src="https://placehold.co/600x400.png" 
+            src="/media/ph1.jpg" 
             alt="Réparation PC" 
             data-ai-hint="pc repair desk"
             width={600}

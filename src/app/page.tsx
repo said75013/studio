@@ -70,7 +70,7 @@ export default function Home() {
         </p>
         <div className="rounded-lg overflow-hidden shadow-xl aspect-video max-w-4xl mx-auto border-4 border-primary/20">
           <Image 
-            src="https://placehold.co/1200x600.png" 
+            src="/media/ph2.jpg" 
             alt="Zone de service à Bruxelles" 
             data-ai-hint="Brussels street map"
             width={1200} 
