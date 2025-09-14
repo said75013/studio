@@ -31,6 +31,7 @@ const appointmentFormSchema = z.object({
 });
 
 // IMPORTANT: Remplacez cette URL par votre propre endpoint Formspree
+// pour recevoir les e-mails à info@reparation-pc-bruxelles.com
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/VOTRE_ID_UNIQUE";
 
 export default function AppointmentForm() {
