@@ -30,6 +30,9 @@ const appointmentFormSchema = z.object({
   issueDescription: z.string().min(10, "Veuillez décrire votre problème en au moins 10 caractères.").max(500, "La description ne doit pas dépasser 500 caractères."),
 });
 
+// IMPORTANT: Remplacez cette URL par votre propre endpoint Formspree
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/VOTRE_ID_UNIQUE";
+
 export default function AppointmentForm() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -47,17 +50,35 @@ export default function AppointmentForm() {
 
   async function onSubmit(data: AppointmentFormData) {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    console.log("Appointment Data:", data);
     
-    toast({
-      title: "Rendez-vous demandé !",
-      description: "Nous avons bien reçu votre demande. Nous vous contacterons bientôt.",
-      variant: "default", // 'default' or 'destructive' for errors. Let's use default for success.
-    });
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Rendez-vous demandé !",
+          description: "Nous avons bien reçu votre demande. Nous vous contacterons bientôt.",
+          variant: "default",
+        });
+        form.reset();
+      } else {
+        throw new Error("Une erreur s'est produite lors de l'envoi.");
+      }
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Impossible d'envoyer votre demande. Veuillez réessayer plus tard ou nous appeler directement.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
