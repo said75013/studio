@@ -30,9 +30,8 @@ const appointmentFormSchema = z.object({
   issueDescription: z.string().min(10, "Veuillez décrire votre problème en au moins 10 caractères.").max(500, "La description ne doit pas dépasser 500 caractères."),
 });
 
-// IMPORTANT: Remplacez cette URL par votre propre endpoint Formspree
-// pour recevoir les e-mails à info@reparation-pc-bruxelles.com
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/VOTRE_ID_UNIQUE";
+// L'URL de votre formulaire Formspree
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnnbyakn";
 
 export default function AppointmentForm() {
   const { toast } = useToast();
